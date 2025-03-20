@@ -1,0 +1,21 @@
+# Dicionário com traduções de palavras em português para inglês
+dicionario_traducao = {
+    'olá': 'hello',
+    'amor': 'love',
+    'livro': 'book',
+    'cachorro': 'dog',
+    'gato': 'cat',
+    'sol': 'sun',
+    'feliz': 'happy'
+}
+
+# Solicitar ao usuário que digite uma palavra em português
+palavra_portugues = input("Digite uma palavra em português para traduzir: ").lower()
+
+# Verificar se a palavra está no dicionário
+if palavra_portugues in dicionario_traducao:
+    # Exibir a tradução
+    print(f"A tradução de '{palavra_portugues}' é: {dicionario_traducao[palavra_portugues]}")
+else:
+    # Exibir mensagem de erro
+    print(f"A tradução da palavra '{palavra_portugues}' não foi encontrada.")
