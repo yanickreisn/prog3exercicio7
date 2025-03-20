@@ -1,0 +1,15 @@
+# Dicionário para armazenar o nome do aluno e sua nota
+cadastro_alunos = {}
+
+# Cadastro de pelo menos 3 alunos
+while len(cadastro_alunos) < 3:
+    nome = input("Digite o nome do aluno: ")
+    nota = float(input(f"Digite a nota de {nome}: "))
+    
+    # Adicionando o aluno ao dicionário
+    cadastro_alunos[nome] = nota
+
+# Exibindo a lista de alunos e suas respectivas notas
+print("\nLista de alunos e suas notas:")
+for nome, nota in cadastro_alunos.items():
+    print(f"{nome}: {nota:.1f}")
