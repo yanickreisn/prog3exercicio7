@@ -1,0 +1,18 @@
+# Catálogo de produtos, com códigos como chaves e tuplas contendo nome e preço
+catalogo_produtos = {
+    101: ("Produto A", 29.99),
+    102: ("Produto B", 49.50),
+    103: ("Produto C", 19.75),
+    104: ("Produto D", 89.99),
+    105: ("Produto E", 15.30)
+}
+
+# Solicitar ao usuário um código de produto
+codigo_produto = int(input("Digite o código do produto para consultar: "))
+
+# Verificar se o código informado existe no catálogo
+if codigo_produto in catalogo_produtos:
+    nome, preco = catalogo_produtos[codigo_produto]  # Desempacota a tupla
+    print(f"Produto: {nome}\nPreço: R${preco:.2f}")
+else:
+    print("Produto não encontrado com o código informado.")
